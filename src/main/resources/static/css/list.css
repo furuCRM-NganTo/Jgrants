@@ -1,0 +1,22 @@
+h1{
+    color: blue;
+}
+
+.sub-container{
+    border: solid 1px #9D9D9D;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+.sub-title{
+    border-bottom: solid 1px #9D9D9D;
+    padding: 0.5rem;
+}
+
+.sub-detail{
+    padding: 0.5rem;
+}
+
+.sub-category{
+    padding: 1rem 0.5rem;
+    background-color: #F5F5F5;
+}

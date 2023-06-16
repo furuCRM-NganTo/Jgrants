@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/list.css}" rel="stylesheet">
+    <script th:href="@{/javaScript/list.js}"></script>
+    <title>Subsidy</title>
+</head>
+<body>
+    <h1>Subsidy!!!!</h1>
+    <button type="button" onclick="createClick">新規作成</button>
+    <div class="container">
+        <div class="row">
+            <div th:each="sub : ${subsidies}">
+                <div class="sub-container">
+                    <div class="sub-title">
+                        <a th:href="@{/detail/{id}(id=${sub.id})}" th:text="${sub.title}"></a>
+                        最終更新日：<span th:text="${sub.lastModifiedDate}"></span>
+                    </div>
+                    <div class="sub-detail">
+                        <span class="fields">制度</span>
+                        <span>補助上限(予算)</span>
+                        <span th:text="${sub.subsidyMaxLimit}+'円'"></span>
+                    </div>
+                    <div class="sub-category">
+                        カテゴリ：<span th:text="${sub.category}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
